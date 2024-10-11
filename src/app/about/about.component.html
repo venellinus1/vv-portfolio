@@ -1,1 +1,43 @@
-<p>about works!</p>
+<section id="about" class="container col-12 col-lg-10 my-5 mx-auto">
+    <p class="fs-5 text-center">Get to know more</p>
+    <h1 class="fw-bold text-center">About Me</h1>
+    <div class="row mt-4">
+      
+      <div class="col-12 col-lg-8 d-flex flex-column justify-content-center align-items-center">
+        <div class="row w-100">
+          <div class="col-12 col-md-6 d-flex justify-content-center mb-3">
+            <div class="about-card card w-100">
+              <div class="card-body text-center">
+                <i class="fa fa-award fa-2x icon"></i>
+                <h3 class="card-title">Experience</h3>
+                <p class="card-text">
+                  {{ getExperienceYears() }}+ years of experience
+                  <br>in Software Development with
+                  <br>a focus on the Backend side
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 d-flex justify-content-center mb-3">
+            <div class="about-card card w-100">
+              <div class="card-body text-center">
+                <i class="fa fa-laptop-code fa-2x icon"></i>
+                <h3 class="card-title">Specialized In</h3>
+                <p class="card-text">
+                  Unity 3D<br>.Net Core<br>Relational and Document DBs<br>Web Development<br>Architecture & 3D Industries
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-100 text-center mt-3">
+          <p>
+            I'm Venelin, a Software Developer, based in Pleven, Bulgaria. With over 8 years of experience in developing and leading Unity 3D projects, I have mastered a strong understanding of 3D software development, .NET Core backend and team management. I’ve expanded my skill set to include Angular and Vue for frontend development, working on several projects to build dynamic web applications. I bring a mix of technical depth, leadership, and a commitment to learning and applying new technologies to solve real-world problems.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-end mt-4">
+      <i class="fa fa-angles-down fa-2x pointer" (click)="scrollTo('experience')"></i>
+    </div>
+  </section>

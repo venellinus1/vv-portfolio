@@ -1,15 +1,8 @@
-#about {
-    padding-top: 15rem;
-  }
-  .about-pic {
+.profile-pic {
     max-width: 450px;
     width: 100%;
     @media (max-width: 1400px) {
       max-width: 300px;
       width: 100%;
     }
-  }
-  .about-card {
-    max-width: 400px;
-    width: 100%;
   }
