@@ -2,6 +2,14 @@ import { Component } from '@angular/core';
 import {NgClass, NgForOf, ViewportScroller} from "@angular/common";
 import {ProjectItemComponent} from "./project-item/project-item.component";
 
+export interface Project {
+  name: string;
+  description: string;
+  technologies: string[];
+  src: string;
+  link: string;
+}
+
 @Component({
   selector: 'app-projects',
   standalone: true,
@@ -31,19 +39,19 @@ export class ProjectsComponent {
     }
   }
 
-  protected projects: {name: string, description: string, technologies: string[], icon: string, link: string | null}[]  = [
+  protected projects: Project[]  = [
     {
       name: 'Dating App',
       description: 'Main Features: User Registration and Authentication; Filtering - by age, gender, last active, registration date; Realtime messaging - SignalR; User\'s Likes; API - pagination, identity, Repository pattern and Unit of Work',
       technologies: ['Angular', 'TypeScript', 'ASP.Net Core', 'EF Core' , 'HTML', 'CSS'],
-      icon: 'fa fa-project-diagram icon',
+      src: './assets/projects/dating-app.png',
       link: 'https://github.com/venellinus1/DatingApp_Angular_Net8',
     },
     {
       name: 'Portfolio website',
       description: 'Personal website showcasing technologies, sample projects, etc',
       technologies: ['Angular', 'TypeScript', 'HTML', 'SCSS'],
-      icon: 'fa fa-building-columns icon',
+      src: './assets/projects/portfolio.png',
       link: 'https://github.com/venellinus1/vv-portfolio',
     },
     

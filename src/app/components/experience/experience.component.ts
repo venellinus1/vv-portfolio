@@ -1,40 +1,46 @@
 
-import { Component } from '@angular/core';
-import {ViewportScroller} from "@angular/common";
-import { ExperienceItemComponent } from './experience-item/experience-item.component';
+import { Component} from '@angular/core';
+import { NgOptimizedImage} from "@angular/common";
+
+
+interface ExperienceItem {
+  name: string;
+  src: string;
+  index?: number;
+}
 
 
 @Component({
   selector: 'app-experience',
   standalone: true,
   imports: [
-    ExperienceItemComponent
+    NgOptimizedImage
   ],
   templateUrl: './experience.component.html',
   styleUrl: './experience.component.scss'
 })
 export class ExperienceComponent {
 
-  constructor(private viewportScroller: ViewportScroller) {}
-
-  protected backendExperienceItems: {key: string, value: string}[] = [
-    {key: "Unity 3D", value: "9/10"},
-    {key: "ASP.Net", value: "7/10"},
-    {key: "JavaScript", value: "8/10"},
-    {key: "MySQL", value: "8/10"},
-    {key: "Redis", value: "7/10"},
-    {key: "MongoDB", value: "7/10"}
+  private experienceItems: ExperienceItem[] = [
+    {name: "MySQL", src: "./assets/technologies/mysql.png"},
+    {name: "Redis", src: "./assets/technologies/redis.png"},
+    {name: "Javascript", src: "./assets/technologies/js.png"},
+    {name: "Typescript", src: "./assets/technologies/ts.png"},
+    {name: "Angular", src: "./assets/technologies/angular.png"},
+    {name: "HTML", src: "./assets/technologies/html.png"},
+    {name: "CSS", src: "./assets/technologies/css.png"},
+    {name: "Bootstrap", src: "./assets/technologies/bootstrap.png"},
+    {name: "Docker", src: "./assets/technologies/docker.png"},
+    {name: "GIT", src: "./assets/technologies/git.png"},
   ];
 
-  protected frontendExperienceItems: {key: string, value: string}[] = [
-    {key: "Angular", value: "7/10"},
-    {key: "Typescript", value: "8/10"},
-    {key: "HTML", value: "8/10"},
-    {key: "CSS", value: "7/10"},
-    {key: "Bootstrap", value: "7/10"},
-  ];
-
-  scrollTo(section: string) {
-    this.viewportScroller.scrollToAnchor(section);
+  
+  get getExperience(): ExperienceItem[] {
+    return Array.from({ length: 10 }, (_, i: number) =>
+      this.experienceItems.map((item: ExperienceItem, index: number) => ({
+        ...item, index: i * this.experienceItems.length + index
+      }))
+    ).flat();
   }
+
 }

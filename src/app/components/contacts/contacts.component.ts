@@ -16,4 +16,8 @@ export class ContactsComponent {
   goToLinkedin() {
     window.open('https://www.linkedin.com/in/venelin-vasilev-10065120/', '_blank');
   }
+
+  get email(): string {
+    return 'sebastianofazzino92@gmail.com';
+  }
 }
