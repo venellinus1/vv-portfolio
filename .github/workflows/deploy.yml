@@ -29,7 +29,16 @@ jobs:
 
     # 4: Deploy to GitHub Pages
     - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v4
+      uses: JamesIves/github-pages-deploy-action@v4
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./venellinus1/vv-portfolio  
+        folder: dist/portfolio/browser
+        branch: gh-pages
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Deploy to GitHub Pages
+      uses: Mattraks/delete-workflow-runs@v2
+      with:
+          token: ${{ secrets.TOKEN }}
+          repository: venellinus1/vv-portfolio
+          retain_days: 10
+          keep_minimum_runs: 5
