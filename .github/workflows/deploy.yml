@@ -33,5 +33,5 @@ jobs:
         with:
           token: ${{ secrets.TOKEN }}
           repository: venellinus1/vv-portfolio
-          retain_days: 10
+          retain_days: 12
           keep_minimum_runs: 5
