@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import {ViewportScroller} from "@angular/common";
+import { NavLinksComponent } from "../shared/nav-links/nav-links.component";
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [NavLinksComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })

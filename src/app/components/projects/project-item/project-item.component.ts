@@ -6,7 +6,7 @@ import { Project } from '../projects.component';
   standalone: true,
   imports: [],
   templateUrl: './project-item.component.html',
-  styleUrl: './project-item.component.scss'
+  styleUrl: '../projects.component.scss'
 })
 export class ProjectItemComponent {
 

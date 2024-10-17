@@ -42,15 +42,15 @@ export class ProjectsComponent {
   protected projects: Project[]  = [
     {
       name: 'Dating App',
-      description: 'Main Features: User Registration and Authentication; Filtering - by age, gender, last active, registration date; Realtime messaging - SignalR; User\'s Likes; API - pagination, identity, Repository pattern and Unit of Work',
-      technologies: ['Angular', 'TypeScript', 'ASP.Net Core', 'EF Core' , 'HTML', 'CSS'],
+      description: 'Main Features: User Registration and Authentication; Filtering - by age, gender, last active, registration date; Realtime messaging - SignalR; Likes; API - pagination, identity, Repository pattern and Unit of Work',
+      technologies: ['Angular', 'TypeScript', 'ASP.Net Core', 'EF Core' , 'HTML', 'CSS', 'Bootstrap'],
       src: './assets/projects/dating-app.png',
       link: 'https://github.com/venellinus1/DatingApp_Angular_Net8',
     },
     {
       name: 'Portfolio website',
       description: 'Personal website showcasing technologies, sample projects, etc',
-      technologies: ['Angular', 'TypeScript', 'HTML', 'SCSS'],
+      technologies: ['Angular', 'TypeScript', 'HTML', 'SCSS', 'Bootstrap'],
       src: './assets/projects/portfolio.png',
       link: 'https://github.com/venellinus1/vv-portfolio',
     },

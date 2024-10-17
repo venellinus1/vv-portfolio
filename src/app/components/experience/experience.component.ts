@@ -22,11 +22,14 @@ interface ExperienceItem {
 export class ExperienceComponent {
 
   private experienceItems: ExperienceItem[] = [
+    {name: "Unity", src: "./assets/technologies/unity3d.png"},
+    {name: "PHP", src: "./assets/technologies/php.png"},
     {name: "MySQL", src: "./assets/technologies/mysql.png"},
     {name: "Redis", src: "./assets/technologies/redis.png"},
     {name: "Javascript", src: "./assets/technologies/js.png"},
     {name: "Typescript", src: "./assets/technologies/ts.png"},
     {name: "Angular", src: "./assets/technologies/angular.png"},
+    {name: "Vue", src: "./assets/technologies/vue.png"},
     {name: "HTML", src: "./assets/technologies/html.png"},
     {name: "CSS", src: "./assets/technologies/css.png"},
     {name: "Bootstrap", src: "./assets/technologies/bootstrap.png"},

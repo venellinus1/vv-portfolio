@@ -1,21 +1,8 @@
 .header-container {
-    height: 25vh;
-  
-    @media (max-width: 1000px) {
-      height: 30vh;
-    }
+  height: 25vh;
+  max-width: 1800px;
+
+  @media (max-width: 1000px) {
+    height: 33vh;
   }
-  
-  a {
-    color: black;
-    text-decoration: none;
-    text-decoration-color: whitesmoke;
-    cursor: pointer;
-  
-    &:hover {
-      color: gray;
-      text-decoration: underline;
-      text-underline-offset: 1rem;
-      text-decoration-color: rgb(181,181, 181);
-    }
-  }
+}
