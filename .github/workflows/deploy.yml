@@ -19,7 +19,7 @@ jobs:
 
       - name: Build Angular app to prod
         working-directory: .
-        run: npm install && npm run build:prod
+        run: npm install && npm run build
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
@@ -33,5 +33,5 @@ jobs:
         with:
           token: ${{ secrets.TOKEN }}
           repository: venellinus1/vv-portfolio
-          retain_days: 12
+          retain_days: 10
           keep_minimum_runs: 5
