@@ -1,43 +1,36 @@
-
-name: Deploy to GitHub Pages
+name: Angular Build and Deploy
 
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-    # 1: Check out the repository
-    - name: Checkout Repository
-      uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    # 2: Set up Node.js
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '22'
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
 
-    # 3: Install dependencies and build the project
-    - name: Install Dependencies and Build
-      run: |
-        npm install
-        npm run build
+      - name: Build Angular app to prod
+        working-directory: .
+        run: npm install && npm run build:prod
 
-    # 4: Deploy to GitHub Pages
-    - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        folder: dist/portfolio/browser
-        branch: gh-pages
-        token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist/portfolio/browser
+          branch: deploy
+          token: ${{ secrets.TOKEN }}
 
-    - name: Deploy to GitHub Pages
-      uses: Mattraks/delete-workflow-runs@v2
-      with:
+      - name: Delete old workflow runs
+        uses: Mattraks/delete-workflow-runs@v2
+        with:
           token: ${{ secrets.TOKEN }}
           repository: venellinus1/vv-portfolio
           retain_days: 10
