@@ -48,6 +48,13 @@ export class ProjectsComponent {
       link: 'https://github.com/venellinus1/DatingApp_Angular_Net8',
     },
     {
+      name: 'Crypto Dashboard',
+      description: 'Banner showing moving tickers showing realtime prices of few different Crypto currencies. Implements Coingecko API',
+      technologies: ['Angular', 'TypeScript', 'RxJS', 'HTML', 'CSS', 'Bootstrap'],
+      src: './assets/projects/crypto-dashboard.png',
+      link: 'https://github.com/venellinus1/crypto-dashboard',
+    },
+    {
       name: 'Portfolio website',
       description: 'Personal website showcasing technologies, sample projects, etc',
       technologies: ['Angular', 'TypeScript', 'HTML', 'SCSS', 'Bootstrap', 'Github Actions', 'CI/CD'],
