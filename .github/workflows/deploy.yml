@@ -26,7 +26,7 @@ jobs:
         with:
           folder: dist/portfolio/browser
           branch: gh-pages
-          token: ${{ secrets.TOKEN }}
+          token: ${{ secrets.VV_PORTFOLIO_TOKEN_DEPLOY }}
 
       - name: Delete old workflow runs
         uses: Mattraks/delete-workflow-runs@v2
