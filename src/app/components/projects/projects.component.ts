@@ -56,7 +56,7 @@ export class ProjectsComponent {
     },
     {
       name: 'Portfolio website',
-      description: 'Personal website showcasing technologies, sample projects, etc',
+      description: 'Personal website (this website here) showcasing technologies, sample projects, etc',
       technologies: ['Angular', 'TypeScript', 'HTML', 'SCSS', 'Bootstrap', 'Github Actions', 'CI/CD'],
       src: './assets/projects/portfolio.png',
       link: 'https://github.com/venellinus1/vv-portfolio',
